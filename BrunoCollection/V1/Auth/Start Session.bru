@@ -1,0 +1,23 @@
+meta {
+  name: Start Session
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{HOST_URL}}/api/v1/session/start
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "john@example.com",
+    "password": "12345678",
+    "device_name": "Bruno API Test"
+  }
+}
