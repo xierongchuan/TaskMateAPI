@@ -1,0 +1,20 @@
+meta {
+  name: Get Users
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{HOST_URL}}/api/v1/users
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{SESSION_TOKEN}}
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}
