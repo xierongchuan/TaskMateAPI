@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{HOST_URL}}/api/users
+  url: {{HOST_URL}}/api/v1/users
   body: none
   auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{SESSION_TOKEN}}
+  Accept: application/json
 }
 
 settings {
